@@ -9,11 +9,8 @@
 <body style="margin-left: auto; margin-right: auto; padding: 10px; background-color: black; width: 100%; color: #FF0000;">
 
 	<script>
-	document.write("hola");
 	function getQueryVariable(variable){
-		document.write("<br><br>");
 		var query = window.location.search.substring(1);
-		document.write(query);
 		var vars = query.split("&!&");
 		for (var i=0;i<vars.length;i++){
 			var pair = vars[i].split("=!=");
@@ -126,26 +123,21 @@
 
 	<script type="text/JavaScript">
 	var macIE = getQueryVariable('macIE');
-	document.write("<br>...." + macIE);
 	document.getElementById('txtMagDestMac').value=macIE;
 
 	var nlista = getQueryVariable('nlista');
-	document.write("<br>...." + nlista);
 	document.getElementById('txtMagName').value=nlista;
 
 	var servidor = getQueryVariable('servidor');
-	document.write("<br>...." + servidor);
 	document.getElementById('txtMagPortal').value=servidor;
 
 	var mac = getQueryVariable('mac');
-	document.write("<br>...." + mac);
 	document.getElementById('txtMagMac').value=mac;
 	
 	document.getElementById('TxtMacAddress').value = macIE;
 	document.getElementById('TxtName').value = nlista;
 	
 	var lista = getQueryVariable('lista');
-	document.write("<br>...." + lista);
 	document.getElementById('TxtLink').value = lista;
 	
 	</script>
@@ -154,11 +146,11 @@
 	if (lista != ""){
 		var el = document.getElementById('TABELLAMAG');
 		el.remove();	
-		//$('#CmdSave').trigger('click');	
+		$('#CmdSave').trigger('click');	
 	}else{
 		var el = document.getElementById('TABELLA');
 		el.remove();	
-		//$('#cmdSaveMag').trigger('click');
+		$('#cmdSaveMag').trigger('click');
 	}
 	</script>
 
